@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-	protected $fillable = ['title','body'];
+	protected $fillable = ['title','slug','body'];
 
     public function user(){
 
-    	return $this->belongsTo(App\User::class);
+    	return $this->belongsTo(User::class);
     }
 
     public function setTitleAttribute($value){
 
-    	$this->attribute('title') = $value;
-    	$this->attribute('slug') = str_slug($value);
+    	//return $this->attributes('title') = $value;
+    	//return $this->attributes('slug') = str_slug($value);
     }
 }
