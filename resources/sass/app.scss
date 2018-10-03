@@ -12,3 +12,34 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+ .topics-response {
+   span{
+        display:inline-block;
+   }
+   .votes{
+	 	min-width:80px;
+	 	height:80px;
+	 	border:1px solid #333;
+	 	padding-top:15px;
+	 	
+	 strong {
+	   display:block;
+	 }
+   }
+   .views {
+     min-width:80px;
+     padding:10px 0;
+   }
+   .answers {
+  	  min-width:80px;
+ 	  height:55px;
+ 	  border:1px solid transparent;
+ 	  padding-top:15px;
+   }
+ }
+
+ .answered {
+  background-color:$colorGreen;
+  border-color:$colorWhite;
+ }
