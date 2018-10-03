@@ -7,7 +7,13 @@
             <div class="card">
              @foreach($questions as $question)
               <div class="single-topics">
-                <div class="card-header">{{$question->title}}</div>
+                <div class="card-header">
+                    <h4><a href="{{$question->url}}">{{$question->title}}</a></h4>
+                   <p class="lead mb-0">
+                       Asked By <a href="{{$question->user->url}}">{{$question->user->name}}</a>
+                       <small class="text-muted">{{$question->created_date}}</small>
+                   </p>
+                </div>
                 <div class="card-body">
                    <p>{{str_limit($question->body,200)}}</p>
                 </div>
